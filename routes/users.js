@@ -15,6 +15,7 @@ const {
 } = require("../auth");
 mongoose.connect(dbUrl);
 const keysecret="DIENFIRVNOVNJVNVNVJKN"
+const CLIENT_URL = process.env.CLIENT_URL
 
 //email config
  
@@ -188,7 +189,7 @@ router.post("/sendpasswordLink",async(req,res)=>{
         from:"ysachin511@gmail.com",
         to:email,
         subject:"Sending Email for passsword reset",
-        text:`This link is valid for two minutes http://localhost:3000/forgetpassword/${userFind.id}/${setusertoken.verifyToken}`
+        text:`This link is valid for two minutes ${CLIENT_URL}/forgetpassword/${userFind.id}/${setusertoken.verifyToken}`
       }
 
       transporter.sendMail(mailOptions,(error,info)=>{
