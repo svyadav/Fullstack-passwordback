@@ -15,7 +15,7 @@ const {
 } = require("../auth");
 mongoose.connect(dbUrl);
 const keysecret="DIENFIRVNOVNJVNVNVJKN"
-const CLIENT_URL = "https://aquamarine-wisp-e67a11.netlify.app"
+// const CLIENT_URL = "https://aquamarine-wisp-e67a11.netlify.app"
 
 //email config
  
@@ -189,7 +189,7 @@ router.post("/sendpasswordLink",async(req,res)=>{
         from:"ysachin511@gmail.com",
         to:email,
         subject:"Sending Email for passsword reset",
-        text:`This link is valid for two minutes ${CLIENT_URL}/forgetpassword/${userFind.id}/${setusertoken.verifyToken}`
+        text:`This link is valid for two minutes https://aquamarine-wisp-e67a11.netlify.app/forgetpassword/${userFind.id}/${setusertoken.verifyToken}`
       }
 
       transporter.sendMail(mailOptions,(error,info)=>{
