@@ -189,7 +189,7 @@ router.post("/sendpasswordLink",async(req,res)=>{
         from:"ysachin511@gmail.com",
         to:email,
         subject:"Sending Email for passsword reset",
-        text:`This link is valid for two minutes https://aquamarine-nasturtium-af7e94.netlify.app/forgetpassword/${userFind.id}/${setusertoken.verifyToken}`
+        text:`This link is valid for two minutes aquamarine-wisp-e67a11.netlify.app/forgetpassword/${userFind.id}/${setusertoken.verifyToken}`
       }
 
       transporter.sendMail(mailOptions,(error,info)=>{
