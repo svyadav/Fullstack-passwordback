@@ -15,7 +15,7 @@ const {
 } = require("../auth");
 mongoose.connect(dbUrl);
 const keysecret="DIENFIRVNOVNJVNVNVJKN"
-const CLIENT_URL = "http://localhost:3000"
+const CLIENT_URL = "https://profound-frangollo-1070c2.netlify.app"
 
 //email config
  
