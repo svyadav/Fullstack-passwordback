@@ -15,7 +15,7 @@ const {
 } = require("../auth");
 mongoose.connect(dbUrl);
 const keysecret="DIENFIRVNOVNJVNVNVJKN"
-const CLIENT_URL = process.env.CLIENT_URL
+const CLIENT_URL = "https://aquamarine-wisp-e67a11.netlify.app"
 
 //email config
  
